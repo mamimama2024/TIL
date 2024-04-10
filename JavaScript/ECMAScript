@@ -1,0 +1,9 @@
+ ECMAScript(エクマスクリプト)
+
+JavaScriptはECMAScriptという仕様で管理されています。
+ECMAScriptはEcma Internationalという団体によって標準化されているJavaScriptの仕様です。
+
+バージョンを表す際はECMAScript2015のように表します。
+また、正式にはECMAScript2015ですが、エンジニア界隈ではそれ以前のECMAScript4やECMAScript5のように年号ではなく数字で管理していた習慣が残りECMAScript6と数える場合もあります。
+その場合の呼称は、ECMAScript6を略して「ES6」といいます。
+→ ES6とECMAScript2015は同じものを指す
