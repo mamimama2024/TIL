@@ -1,0 +1,88 @@
+# 変数
+
+## let
+letは、ECMAScript2015以降のJavaScriptの記述であり変数を定義するために用いる
+・再代入は可能、再定義は不可
+
+## const
+ECMAScript2015以降のJavaScriptの記述であり定数を定義するために用いる
+・再代入・再定義とも不可
+・定数は再代入することがない固定の値に用いる。定数を用いると「値を変更しないこと」をコードで表すことができる。
+
+
+# 関数定義
+
+## 通常はfunctionを使用して定義する
+
+```JavaScript
+function sample(){
+   console.log('Hello World')
+}
+
+sample()[
+// => Hello World
+```
+
+## アロー関数
+関数定義を端的に行える
+
+```JavaScript
+const sample = () => {
+   console.log('Hello World')
+}
+
+sample()
+// => Hello World
+```
+constでsampleという定数へ、() => { 処理 }という記法を用いた処理を代入
+このように記述することで、functionで定義した場合と同じようにsample()で呼び出すことができる
+
+アロー関数では「引数が1つの場合」は()を省略することができる
+```JavaScript
+const sample = word => {
+   console.log(word)
+}
+
+sample("Hello World")
+// => Hello World
+```
+
+加えて、処理が複数行でない場合は{}も省略することができる
+```JavaScript
+const sample = word => console.log(word)
+
+sample("Hello World")
+// => Hello World
+```
+→ 通常の関数定義では複数行必要だったものも1行で済む
+
+Reactでは関数をよく定義するため、端的に記述できるアロー関数を用いると開発の効率が向上する
+
+
+## テンプレートリテラル
+テンプレートリテラルとは、文字列に式を組み込むことができる仕組み
+※リテラルとは、プログラムのソースコードにおいて使用される、数値や文字列を直接に記述した定数のことである。 変数の対義語であり、変更されないことを前提とした値である。
+
+```JavaScript
+const sample = word => {
+   console.log(`${word} World`)
+}
+
+sample("Hello")
+// => Hello World
+```
+テンプレートリテラルを使用するためには、バッククォート(``)を使用した文字列の中へ「${式}」と記述する。このように記述すると、文字列の中で「${}」を式を先に評価し、その結果と文字列を合わせた値を返却する。上記の場合は「${word}」の部分が「Hello」となるため、「Hello + World」のようになり、最終的には「Hello World」がコンソールに出力される。
+
+テンプレートリテラルの使い道の例）
+https://master.tech-camp.in/ここのパスを柔軟に変更する
+```JavaScript
+const url = (path) => {
+return `https://master.tech-camp.in/${path}`
+}
+
+url("sample")
+// => "https://master.tech-camp.in/sample"
+```
+→引数をsampleとした場合のurlの返り値はhttps://master.tech-camp.in/sampleとなり、https://master.tech-camp.in/パスのパス部分を引数によって管理できる
+
+## 分割代入

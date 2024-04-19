@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Font Awesome https://fontawesome.com/start -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <title>Todo List</title>
+</head>
+<body>
+  <div class="sm:container mx-auto px-4">
+    <h2 class="text-2xl py-8">ショッピングカート</h2>
+    <div class="content flex bg-gray-200  p-4">
+      <div class="main w-7/12 bg-gray-200 mr-4">
+        <div class="cart">
+          <div class="item flex p-4 mb-4 bg-white">
+            <img src="space_food.png" class="w-48 h-48">
+            <div class="discription-space p-4">
+              <p class="name text-xl mb-4">宇宙食</p>
+              <div class="discription mb-4">
+                食べやすい宇宙食です。
+              </div>
+              <p class="mb-4">
+                <select class="item_num" name="item_num">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                </select>
+              </p>
+              <div class="amount_box">
+                <p>￥<span class="item_amount">2300</span></p>
+              </div>
+            </div>
+          </div>
+          <div class="item flex p-4 mb-4 bg-white">
+            <img src="fantasy_unicorn_rainbow.png" class="w-48 h-48">
+            <div class="discription-space p-4">
+              <p class="name text-xl mb-4">ぬいぐるみ</p>
+              <div class="discription mb-4">
+                ユニコーンのぬいぐるみです
+              </div>
+              <p class="mb-4">
+                <select class="item_num" name="item_num">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                </select>
+              </p>
+              <div class="amount_box">
+                <p>￥<span class="item_amount">1500</span></p>
+              </div>
+            </div>
+          </div>
+          <div class="item flex p-4 mb-4 bg-white">
+            <img src="cthulhu_deep_ones.png" class="w-48 h-48">
+            <div class="discription-space p-4">
+              <p class="name text-xl mb-4">クトゥルフのぬいぐるみ</p>
+              <div class="discription mb-4">
+                名状しがたきものです
+              </div>
+              <p class="mb-4">
+                <select class="item_num" name="item_num">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                </select>
+              </p>
+              <div class="amount_box">
+                <p>￥<span class="item_amount">3700</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="side w-4/12">
+        <div class="total_amount_box bg-white h-40">
+          <p class="p-4 text-2xl">小計:￥<span id="cart_amount">7500</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
